@@ -1,63 +1,43 @@
-# Deep Research AI Agentic System - Explanation Document
+# Deep Research AI Agentic System
 
-## 1. Overview of the System
+## Overview
+The **Deep Research AI Agentic System** is an intelligent research assistant that automates online data gathering and response generation. It utilizes a **multi-agent architecture** with **Tavily API** for web crawling and **LLMs (Gemini/OpenAI)** for answer drafting. The system is built with **LangGraph** and **LangChain** for seamless agent interactions.
 
-The **Deep Research AI Agentic System** is designed to automate online research by leveraging a dual-agent framework. The system consists of:
+## Features
+✅ **Automated Web Research** - Uses Tavily API to fetch relevant content.  
+✅ **Dual-Agent System** - One agent collects data, another drafts responses.  
+✅ **Context-Aware Summarization** - Filters irrelevant content for precise results.  
+✅ **Scalable & Extensible** - Can integrate additional agents for fact-checking or analysis.  
+✅ **Optimized Performance** - Implements caching to avoid redundant API calls.  
 
-1. **Research Agent** - Responsible for gathering information from the web using **Tavily API**.
-2. **Answer Drafting Agent** - Processes the collected data and generates structured responses using **LLMs (Gemini/OpenAI)**.
+## Tech Stack
+- **Python**
+- **LangChain & LangGraph**
+- **Tavily API** (for web research)
+- **OpenAI/Gemini API** (for text generation)
+- **Streamlit** (for UI, if applicable)
 
-### **Workflow**
-- The **user inputs a query**.
-- The **Research Agent** fetches relevant web pages and extracts meaningful content.
-- The **Answer Drafting Agent** processes the extracted data, summarizes key points, and generates a well-structured response.
-- The **final output is returned to the user** in a readable format.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shivanshss4536/kairon.git
+   
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up API keys in a `.env` file:
+   ```plaintext
+   GOOGLE_API_KEY=your-google-api-key
+   TAVILY_API_KEY=your-tavily-api-key
+   ```
 
-The system is implemented using **LangGraph** and **LangChain**, ensuring efficient information flow between agents.
+## Usage
+Run the main script:
+```bash
+python app.py
+```
 
----
-
-## 2. Why This Approach?
-
-### **1. Multi-Agent Efficiency**
-- Separating **research** and **response generation** improves modularity and scalability.
-- The Research Agent focuses solely on web crawling, while the Answer Drafting Agent refines the data.
-
-### **2. Use of LangGraph & LangChain**
-- **LangGraph** helps define a structured workflow for agent interactions.
-- **LangChain** enables seamless integration with LLMs and external APIs.
-
-### **3. Automated Web Crawling with Tavily**
-- Tavily provides **high-quality search results** and extracts data efficiently.
-- Reduces reliance on traditional search engines and manual data gathering.
-
-### **4. Scalability & Extensibility**
-- More agents can be added for **fact-checking, sentiment analysis, or categorization**.
-- The system can be integrated into larger AI workflows.
-
----
-
-## 3. Unique Features & Enhancements
-
-### **1. Context-Aware Research & Summarization**
-- The system **filters irrelevant information** before passing it to the Answer Drafting Agent.
-- Uses **semantic search** to extract only the most relevant parts of web pages.
-
-### **2. Adaptive Response Generation**
-- The Answer Drafting Agent adjusts its **writing style** based on query type (e.g., technical, general, or summarized answer).
-
-### **3. Multi-Query Handling**
-- Supports **batch processing of queries**, allowing users to research multiple topics in a single request.
-
-### **4. Caching Mechanism for Faster Performance**
-- Implements **local caching** to prevent redundant API calls for frequently searched topics.
-
----
-
-## 4. Conclusion
-This **Deep Research AI Agentic System** provides an automated, structured, and intelligent way to gather and summarize online information. By utilizing **Tavily for research** and **LLMs for response generation**, it enhances research efficiency while maintaining accuracy and readability.
-
-The modular architecture ensures **scalability, flexibility, and easy integration** into various domains, including academia, journalism, and enterprise solutions.
-
-For more details, refer to the **GitHub repository**: [Insert GitHub Link Here]
-
+## Contribution
+Feel free to open issues or submit pull requests. 🚀
